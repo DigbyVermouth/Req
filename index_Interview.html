@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Stallion Tank — Business Profile & Improvement Survey</title>
+<title>Blank Intake Forms — Trucking SMB Requirements Gathering</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap');
 
@@ -542,7 +542,7 @@
 
 <!-- ══ STICKY TOOLBAR ══ -->
 <div class="toolbar">
-  <span class="toolbar-title">Stallion Tank — Business Survey</span>
+  <span class="toolbar-title">Trucking SMB — Intake Forms</span>
   <span class="save-status" id="saveStatus">No saved data</span>
   <button class="toolbar-btn btn-clear" onclick="clearSave()">Clear saved data</button>
   <button class="toolbar-btn btn-save" onclick="saveForm()">
@@ -560,11 +560,11 @@
 
 <!-- ══ COVER ══ -->
 <div class="cover">
-  <div class="cover-type">Business Improvement Survey</div>
-  <h1>Tell Us How Your Operation Actually Runs</h1>
-  <h2>Stallion Tank — Trucking / Construction Materials / Brokering / Factoring</h2>
+  <div class="cover-type">Blank Intake Form Set</div>
+  <h1>Business Process &amp; AI Requirements — Intake &amp; Discovery Forms</h1>
+  <h2>Trucking / Construction Materials / Brokering / Factoring — SMB Edition</h2>
   <div class="instructions">
-    <strong>This takes about 20 minutes.</strong> Answer as honestly as you can — there are no wrong answers. The more specific you are about what's frustrating, the better the solution we can build for you. Fill it out in one sitting or save your progress and come back to it. When you're done, hit <strong>Export PDF</strong> and email the file back to us.
+    <strong>How to use these forms:</strong> Complete Form A (Business Profile) before the first meeting. Bring Forms B–F to the discovery interview. Form G (Requirements Capture) is completed collaboratively during or after the interview. Form H is signed before implementation begins. Print or fill digitally — all fields are editable.
   </div>
 </div>
 
@@ -572,8 +572,8 @@
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">A</div>
-    <h2>Your Business</h2>
-    <span class="section-note">Basic info — 2 min</span>
+    <h2>Business Profile</h2>
+    <span class="section-note">Complete before first meeting</span>
   </div>
 
   <div class="field-row col2">
@@ -589,8 +589,8 @@
 
   <div class="field-row col3">
     <div class="field-group">
-      <label class="field-label">Your Name <span class="required">*</span></label>
-      <input type="text" placeholder="e.g. Joseph Taylor"/>
+      <label class="field-label">Owner / Primary Contact <span class="required">*</span></label>
+      <input type="text"/>
     </div>
     <div class="field-group">
       <label class="field-label">Phone</label>
@@ -641,7 +641,7 @@
   </div>
 
   <div class="field-group">
-    <label class="field-label">What does your business do? <span class="hint">(check all that apply)</span></label>
+    <label class="field-label">Business Lines Active <span class="hint">(check all that apply)</span></label>
     <div class="option-group">
       <label class="option-pill"><input type="checkbox"/> Own-truck hauling</label>
       <label class="option-pill"><input type="checkbox"/> Load brokering (subs)</label>
@@ -670,17 +670,17 @@
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">B</div>
-    <h2>Tools &amp; Apps You Use Today</h2>
-    <span class="section-note">5 min</span>
+    <h2>Current Technology &amp; Tools</h2>
+    <span class="section-note">Interview — 10 min</span>
   </div>
 
   <div class="callout gold">
-    <div class="clabel">Why we're asking</div>
-    We want to build on what's already working — not rip it out and start over. Be honest about what you actually use vs. what just sits on your phone collecting dust.
+    <div class="clabel">Interviewer Note</div>
+    Don't assume. Ask the owner to show you on their phone. Many tools are "used but hated" — that matters.
   </div>
 
   <table class="pain-matrix">
-    <thead><tr><th>Tool / App / Method</th><th>What you use it for</th><th>How happy are you with it? (1–5)</th><th>Want to keep it?</th></tr></thead>
+    <thead><tr><th>Tool / System</th><th>What They Use It For</th><th>Satisfaction (1–5)</th><th>Would they keep it?</th></tr></thead>
     <tbody>
       <tr>
         <td><input type="text" value="QuickBooks"/></td>
@@ -722,7 +722,7 @@
   </table>
 
   <div class="field-group">
-    <label class="field-label">What devices do you and your team use for work? <span class="hint">(check all)</span></label>
+    <label class="field-label">Devices used for business <span class="hint">(check all)</span></label>
     <div class="option-group">
       <label class="option-pill"><input type="checkbox"/> Android phone</label>
       <label class="option-pill"><input type="checkbox"/> iPhone</label>
@@ -738,22 +738,22 @@
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">C</div>
-    <h2>What's Eating Your Time</h2>
-    <span class="section-note">The most important section — 10 min</span>
+    <h2>Pain Point Discovery</h2>
+    <span class="section-note">Interview — 20 min (core section)</span>
   </div>
 
   <div class="callout">
-    <div class="clabel">This is the big one</div>
-    Think about your last week. Where did you lose time on stuff that had nothing to do with actually running loads? Don't sugarcoat it — the more honest you are here, the better the fix we can build.
+    <div class="clabel">Interviewer Prompt</div>
+    "Walk me through a typical week. Where do you lose the most time? What tasks do you dread? What's the last thing that fell through the cracks?" Let them talk — don't interrupt with solutions.
   </div>
 
   <div class="field-group">
-    <label class="field-label">Roughly how many hours a week do you spend on admin, paperwork, and back-office tasks?</label>
+    <label class="field-label">Hours per week owner spends on back-office / admin (estimate)</label>
     <input type="number" min="0" style="max-width:120px"/> hrs/week
   </div>
 
   <div class="field-group">
-    <label class="field-label">How long after a load delivers do you typically get an invoice out to the customer?</label>
+    <label class="field-label">Load-to-Invoice cycle time (current average)</label>
     <div class="option-group">
       <label class="option-pill"><input type="radio" name="l2i"/> Same day</label>
       <label class="option-pill"><input type="radio" name="l2i"/> 1–2 days</label>
@@ -765,7 +765,7 @@
   </div>
 
   <div class="field-group">
-    <label class="field-label">Once you send an invoice, how long does it usually take to get paid?</label>
+    <label class="field-label">Average Days Sales Outstanding (how long to get paid after invoice)</label>
     <div class="option-group">
       <label class="option-pill"><input type="radio" name="dso"/> Under 10 days</label>
       <label class="option-pill"><input type="radio" name="dso"/> 10–20 days</label>
@@ -776,54 +776,54 @@
     </div>
   </div>
 
-  <p style="font-size:13px;font-weight:600;color:var(--accent);margin:16px 0 10px;">For each of the headaches below — how bad is it? (1 = minor annoyance, 5 = costs me real time or money every week)</p>
+  <p style="font-size:13px;font-weight:600;color:var(--accent);margin:16px 0 10px;">Rate each pain area (1 = minor annoyance, 5 = blocking growth):</p>
   <table class="pain-matrix">
-    <thead><tr><th>Headache</th><th>How bad? (1–5)</th><th>How often?</th><th>What actually happens — give us an example</th></tr></thead>
+    <thead><tr><th>Pain Area</th><th>Severity (1–5)</th><th>Frequency</th><th>Notes / Specific Example</th></tr></thead>
     <tbody id="painRows">
       <tr>
-        <td>Chasing drivers for paperwork after a delivery</td>
+        <td>POD collection / chasing drivers</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. POD sits in the truck for days before I can invoice..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td>Getting invoices created and out the door</td>
+        <td>Creating / sending invoices</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. I'm typing them manually late at night..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td>Finding documents when you need them</td>
+        <td>Document filing / finding lost docs</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. Rate confirmations disappear, BOLs are in someone's truck..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td>Coordinating with subcontractors on brokered loads</td>
+        <td>Broker / subcontractor coordination</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. Everything's done by text, nothing's in writing..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td>Keeping track of factoring / advances you've given customers</td>
+        <td>Factoring / advance tracking</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. I'm tracking it in my head and it's getting complicated..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td>Knowing which customers and lanes are actually making you money</td>
+        <td>Knowing which lanes / customers are profitable</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. I have a gut feeling but no real numbers..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td>Following up on invoices that haven't been paid</td>
+        <td>Collections / following up on late payments</td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
-        <td><textarea placeholder="e.g. I forget who owes what until I really need the cash..."></textarea></td>
+        <td><textarea placeholder="What actually happens..."></textarea></td>
       </tr>
       <tr>
-        <td><input type="text" placeholder="Something else that's driving you crazy — add it here"/></td>
+        <td><input type="text" placeholder="Other pain (add here)"/></td>
         <td><select><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
         <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
         <td><textarea></textarea></td>
@@ -837,13 +837,13 @@
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">D</div>
-    <h2>Your Budget &amp; Boundaries</h2>
-    <span class="section-note">5 min</span>
+    <h2>Constraints &amp; Preferences</h2>
+    <span class="section-note">Interview — 10 min</span>
   </div>
 
   <div class="field-row col2">
     <div class="field-group">
-      <label class="field-label">What's a reasonable monthly cost for tools that run your operation better? <span class="required">*</span></label>
+      <label class="field-label">Max acceptable monthly tool cost <span class="required">*</span></label>
       <select>
         <option>— Select —</option>
         <option>Under $50/mo</option>
@@ -855,7 +855,7 @@
       </select>
     </div>
     <div class="field-group">
-      <label class="field-label">What would you be comfortable investing one time to get the right system set up?</label>
+      <label class="field-label">Acceptable one-time setup investment</label>
       <select>
         <option>— Select —</option>
         <option>$0 (free tools only)</option>
@@ -868,35 +868,35 @@
   </div>
 
   <div class="field-group">
-    <label class="field-label">How comfortable are you and your team with new apps and technology?</label>
+    <label class="field-label">Tech comfort level (owner &amp; staff)</label>
     <div class="option-group">
-      <label class="option-pill"><input type="radio" name="tech"/> Not very — keep it dead simple</label>
-      <label class="option-pill"><input type="radio" name="tech"/> Pretty comfortable — we figure things out</label>
-      <label class="option-pill"><input type="radio" name="tech"/> Very comfortable — open to anything that works</label>
+      <label class="option-pill"><input type="radio" name="tech"/> Beginner — needs very simple tools</label>
+      <label class="option-pill"><input type="radio" name="tech"/> Moderate — comfortable with apps</label>
+      <label class="option-pill"><input type="radio" name="tech"/> Advanced — open to custom solutions</label>
     </div>
   </div>
 
   <div class="field-group">
-    <label class="field-label">Any hard rules we need to know about? <span class="hint">(check all that apply)</span></label>
+    <label class="field-label">Hard constraints <span class="hint">(check all that apply)</span></label>
     <div class="option-group">
-      <label class="option-pill"><input type="checkbox"/> We need to keep QuickBooks</label>
-      <label class="option-pill"><input type="checkbox"/> No monthly subscriptions — one-time cost only</label>
-      <label class="option-pill"><input type="checkbox"/> Has to work where cell service is spotty</label>
-      <label class="option-pill"><input type="checkbox"/> Data needs to stay in the US</label>
-      <label class="option-pill"><input type="checkbox"/> Has to work on iPhone</label>
-      <label class="option-pill"><input type="checkbox"/> Has to work on Android</label>
-      <label class="option-pill"><input type="checkbox"/> Drivers can't be asked to install new apps</label>
+      <label class="option-pill"><input type="checkbox"/> Must keep QuickBooks</label>
+      <label class="option-pill"><input type="checkbox"/> No subscription apps (one-time purchase only)</label>
+      <label class="option-pill"><input type="checkbox"/> Must work offline (cellular dead zones)</label>
+      <label class="option-pill"><input type="checkbox"/> No data outside US</label>
+      <label class="option-pill"><input type="checkbox"/> Must work on iOS</label>
+      <label class="option-pill"><input type="checkbox"/> Must work on Android</label>
+      <label class="option-pill"><input type="checkbox"/> Drivers cannot install new apps</label>
     </div>
   </div>
 
   <div class="field-group">
-    <label class="field-label">What would make this whole thing a waste of time for you?</label>
-    <textarea placeholder="e.g. 'If my drivers have to do more steps' or 'If it ends up costing more than it saves me'"></textarea>
+    <label class="field-label">What would make this project a failure? <span class="hint">(open — their words)</span></label>
+    <textarea placeholder="e.g. 'If my drivers have to do more steps' or 'If it costs more than it saves'"></textarea>
   </div>
 
   <div class="field-group">
-    <label class="field-label">Picture this in 90 days — what does a win look like to you?</label>
-    <textarea placeholder="e.g. 'I want to know every Friday exactly what I'm owed and who owes it'"></textarea>
+    <label class="field-label">What does success look like in 90 days? <span class="hint">(their words — exact quote is gold)</span></label>
+    <textarea placeholder="e.g. 'I want to know at the end of each week exactly what I'm owed and who I'm owed it from'"></textarea>
   </div>
 </div>
 
@@ -904,27 +904,27 @@
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">E</div>
-    <h2>Brokering &amp; Factoring</h2>
-    <span class="section-note">Skip this section if it doesn't apply to you</span>
+    <h2>Brokering &amp; Factoring Details</h2>
+    <span class="section-note">Complete only if applicable</span>
   </div>
 
-  <p style="font-size:13px;color:var(--ink3);margin-bottom:16px;font-style:italic;">Only fill out the parts that match how you operate. Check the box at the start of each section to confirm it applies.</p>
+  <p style="font-size:13px;color:var(--ink3);margin-bottom:16px;font-style:italic;">Skip sections that don't apply. Check the box to confirm applicability.</p>
 
   <div class="field-group">
-    <label class="option-pill" style="display:inline-flex;margin-bottom:16px"><input type="checkbox"/> <strong>We broker loads out to owner-operators or subcontractors</strong></label>
+    <label class="option-pill" style="display:inline-flex;margin-bottom:16px"><input type="checkbox"/> <strong>This business brokers loads to subcontractors</strong></label>
   </div>
 
   <div class="field-row col3">
     <div class="field-group">
-      <label class="field-label">How many subs / O/Os do you work with?</label>
+      <label class="field-label">Number of active subcontractors (O/Os)</label>
       <input type="number" min="0"/>
     </div>
     <div class="field-group">
-      <label class="field-label">Roughly what % of your loads go to subs?</label>
+      <label class="field-label">% of total loads brokered (approx.)</label>
       <input type="text" placeholder="e.g. 15%"/>
     </div>
     <div class="field-group">
-      <label class="field-label">How do you assign loads to subs right now?</label>
+      <label class="field-label">How are sub assignments communicated?</label>
       <select>
         <option>— Select —</option>
         <option>Text message</option>
@@ -938,55 +938,55 @@
   </div>
 
   <div class="field-group">
-    <label class="field-label">Do your subs get a signed rate confirmation for every load?</label>
+    <label class="field-label">Are signed rate confirmations issued to subs for every load?</label>
     <div class="option-group">
-      <label class="option-pill"><input type="radio" name="subrc"/> Yes, every time</label>
+      <label class="option-pill"><input type="radio" name="subrc"/> Yes, always</label>
       <label class="option-pill"><input type="radio" name="subrc"/> Sometimes</label>
-      <label class="option-pill"><input type="radio" name="subrc"/> No — we handle it by phone or text</label>
+      <label class="option-pill"><input type="radio" name="subrc"/> No — verbal / text only</label>
     </div>
   </div>
 
   <div class="field-group">
-    <label class="field-label">Do you have their paperwork on file — W-9, insurance cert, and a signed broker-carrier agreement?</label>
+    <label class="field-label">Carrier compliance packets on file (W-9, insurance, broker-carrier agreement)?</label>
     <div class="option-group">
-      <label class="option-pill"><input type="radio" name="bca"/> Yes — all of them, fully current</label>
-      <label class="option-pill"><input type="radio" name="bca"/> Some of them</label>
-      <label class="option-pill"><input type="radio" name="bca"/> No — nothing formal on file</label>
+      <label class="option-pill"><input type="radio" name="bca"/> All subs — fully compliant</label>
+      <label class="option-pill"><input type="radio" name="bca"/> Some subs only</label>
+      <label class="option-pill"><input type="radio" name="bca"/> No — nothing on file</label>
     </div>
   </div>
 
   <div style="border-top:1px solid var(--border);margin:20px 0;padding-top:20px;">
     <div class="field-group">
-      <label class="option-pill" style="display:inline-flex;margin-bottom:16px"><input type="checkbox"/> <strong>We offer advance payment / factoring terms to some customers</strong></label>
+      <label class="option-pill" style="display:inline-flex;margin-bottom:16px"><input type="checkbox"/> <strong>This business offers factoring / advance terms to customers</strong></label>
     </div>
 
     <div class="field-row col3">
       <div class="field-group">
-        <label class="field-label">How many customers are on these terms?</label>
+        <label class="field-label">Number of factored customers</label>
         <input type="number" min="0"/>
       </div>
       <div class="field-group">
-        <label class="field-label">How much do you typically advance?</label>
-        <input type="text" placeholder="e.g. 90% of the invoice"/>
+        <label class="field-label">Typical advance rate</label>
+        <input type="text" placeholder="e.g. 90% of invoice"/>
       </div>
       <div class="field-group">
-        <label class="field-label">What fee do you charge for it?</label>
-        <input type="text" placeholder="e.g. 2.5% of the invoice"/>
+        <label class="field-label">Typical fee charged</label>
+        <input type="text" placeholder="e.g. 2.5% of invoice"/>
       </div>
     </div>
 
     <div class="field-group">
-      <label class="field-label">Is there a written agreement in place with those customers?</label>
+      <label class="field-label">Is there a written factoring agreement in place?</label>
       <div class="option-group">
-        <label class="option-pill"><input type="radio" name="fac"/> Yes — signed for all of them</label>
-        <label class="option-pill"><input type="radio" name="fac"/> It's more of a handshake deal</label>
-        <label class="option-pill"><input type="radio" name="fac"/> Nothing in writing at all</label>
+        <label class="option-pill"><input type="radio" name="fac"/> Yes — signed for all customers</label>
+        <label class="option-pill"><input type="radio" name="fac"/> Informal / verbal only</label>
+        <label class="option-pill"><input type="radio" name="fac"/> No agreement at all</label>
       </div>
     </div>
 
     <div class="field-group">
-      <label class="field-label">How do you keep track of who you've advanced money to and what's been paid back?</label>
-      <textarea placeholder="e.g. 'Mostly in my head' / 'A spreadsheet' / 'QuickBooks' / 'Honestly I'm not sure'"></textarea>
+      <label class="field-label">How is the factoring ledger tracked today?</label>
+      <textarea placeholder="e.g. 'In my head' / 'Separate spreadsheet' / 'QuickBooks' / 'Not tracked'"></textarea>
     </div>
   </div>
 </div>
@@ -995,17 +995,17 @@
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">F</div>
-    <h2>Your Paperwork — Where Does It Live?</h2>
-    <span class="section-note">5 min</span>
+    <h2>Document &amp; Image Inventory</h2>
+    <span class="section-note">Walk-through — 10 min</span>
   </div>
 
   <div class="callout teal">
-    <div class="clabel">Think about right now</div>
-    If a customer called today asking for a BOL from three months ago — where would you actually go to find it? That's what we're trying to understand. Be honest, even if the answer is "I have no idea."
+    <div class="clabel">Interviewer Note</div>
+    Ask them to show you where documents actually live right now — truck cab, email, phone camera roll, binders, drawer. Physical walk-through beats any checklist.
   </div>
 
   <table class="pain-matrix">
-    <thead><tr><th>Document</th><th>Where does it end up right now?</th><th>How many per month?</th><th>What's the biggest problem with it?</th></tr></thead>
+    <thead><tr><th>Document Type</th><th>Current Location</th><th>Volume / Month</th><th>Biggest Problem</th></tr></thead>
     <tbody>
       <tr>
         <td>Bill of Lading (BOL)</td>
@@ -1053,117 +1053,126 @@
   </table>
 </div>
 
-<!-- ══════════════ FORM G — WISH LIST ══════════════ -->
+<!-- ══════════════ FORM G — REQUIREMENTS CAPTURE ══════════════ -->
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">G</div>
-    <h2>If You Could Wave a Magic Wand...</h2>
-    <span class="section-note">5 min — no wrong answers</span>
+    <h2>Requirements Capture</h2>
+    <span class="section-note">Complete during or after interview — collaborative</span>
   </div>
 
   <div class="callout gold">
-    <div class="clabel">Just be honest</div>
-    Don't worry about whether it's possible or what it costs. Just tell us what would make your life easier. We'll figure out the how — that's our job.
+    <div class="clabel">Instructions</div>
+    Write one requirement per row. Use the pain data from Form C to drive prioritization. Requirements should describe <em>what</em> the system must do, not <em>how</em>. Leave the "Proposed Solution" column blank during discovery — fill it in after you've reviewed options.
   </div>
 
-  <div class="field-group">
-    <label class="field-label">What's the single biggest thing you wish just happened automatically — without you having to touch it?</label>
-    <textarea placeholder="e.g. 'I wish invoices just went out the same day a load delivers without me typing anything'"></textarea>
-  </div>
-
-  <div class="field-group">
-    <label class="field-label">What's the task you dread most every week?</label>
-    <textarea placeholder="e.g. 'Chasing my drivers for paperwork so I can get paid'"></textarea>
-  </div>
-
-  <div class="field-group">
-    <label class="field-label">What do you wish you could see at a glance — any time, from your phone?</label>
-    <textarea placeholder="e.g. 'Who owes me money and how late they are' or 'Which customer is actually making me the most profit'"></textarea>
-  </div>
-
-  <div class="field-group">
-    <label class="field-label">Is there anything you're doing manually right now that feels like it shouldn't need a human to do it?</label>
-    <textarea placeholder="e.g. 'Typing the same customer info into an invoice every single time'"></textarea>
-  </div>
-
-  <div class="field-group">
-    <label class="field-label">If you had 5 extra hours back every week, what would you actually do with them?</label>
-    <textarea placeholder="e.g. 'Go after two new customers I've been putting off calling'"></textarea>
-  </div>
-
-  <p style="font-size:13px;font-weight:600;color:var(--accent);margin:24px 0 10px;">Anything else on your wish list? Add as many as you want:</p>
-
-  <table class="pain-matrix">
-    <thead><tr><th>I wish the system would...</th><th>How important is this? (1–5)</th></tr></thead>
-    <tbody id="wishRows">
+  <table class="req-capture">
+    <thead><tr><th width="60">Req ID</th><th width="70">Category</th><th>Requirement (What must happen)</th><th width="80">Priority</th><th>Acceptance Criteria (How we'll know it works)</th><th width="100">Proposed Solution</th></tr></thead>
+    <tbody id="reqRows">
       <tr>
-        <td><textarea placeholder="e.g. Remind customers automatically when an invoice is overdue"></textarea></td>
-        <td><select><option></option><option>1 — Nice to have</option><option>2</option><option>3 — Important</option><option>4</option><option>5 — Can't live without it</option></select></td>
+        <td><input type="text" value="DOC-001" style="font-family:var(--mono);font-size:11px"/></td>
+        <td><select style="font-size:11px"><option>Document</option><option>Invoicing</option><option>Brokering</option><option>Factoring</option><option>AI/Auto</option><option>Reporting</option><option>Other</option></select></td>
+        <td><textarea placeholder="e.g. Driver photos POD from phone → auto-tagged to load record"></textarea></td>
+        <td><select style="font-size:11px"><option>P1 Must</option><option>P2 Should</option><option>P3 Nice</option></select></td>
+        <td><textarea placeholder="e.g. Image stored, tagged, searchable within 60 sec"></textarea></td>
+        <td><input type="text" placeholder="Tool / feature"/></td>
       </tr>
       <tr>
-        <td><textarea placeholder="e.g. Store all my BOLs and PODs in one place I can search from my phone"></textarea></td>
-        <td><select><option></option><option>1 — Nice to have</option><option>2</option><option>3 — Important</option><option>4</option><option>5 — Can't live without it</option></select></td>
+        <td><input type="text" value="INV-001" style="font-family:var(--mono);font-size:11px"/></td>
+        <td><select style="font-size:11px"><option>Invoicing</option><option>Document</option><option>Brokering</option><option>Factoring</option><option>AI/Auto</option><option>Reporting</option><option>Other</option></select></td>
+        <td><textarea placeholder="e.g. Invoice auto-drafted when POD is received"></textarea></td>
+        <td><select style="font-size:11px"><option>P1 Must</option><option>P2 Should</option><option>P3 Nice</option></select></td>
+        <td><textarea placeholder="Draft ready for review within 2 min"></textarea></td>
+        <td><input type="text"/></td>
       </tr>
       <tr>
+        <td><input type="text" style="font-family:var(--mono);font-size:11px" placeholder="BRK-001"/></td>
+        <td><select style="font-size:11px"><option>Brokering</option><option>Document</option><option>Invoicing</option><option>Factoring</option><option>AI/Auto</option><option>Reporting</option><option>Other</option></select></td>
         <td><textarea></textarea></td>
-        <td><select><option></option><option>1 — Nice to have</option><option>2</option><option>3 — Important</option><option>4</option><option>5 — Can't live without it</option></select></td>
+        <td><select style="font-size:11px"><option>P1 Must</option><option>P2 Should</option><option>P3 Nice</option></select></td>
+        <td><textarea></textarea></td>
+        <td><input type="text"/></td>
+      </tr>
+      <tr>
+        <td><input type="text" style="font-family:var(--mono);font-size:11px" placeholder="FAC-001"/></td>
+        <td><select style="font-size:11px"><option>Factoring</option><option>Document</option><option>Invoicing</option><option>Brokering</option><option>AI/Auto</option><option>Reporting</option><option>Other</option></select></td>
+        <td><textarea></textarea></td>
+        <td><select style="font-size:11px"><option>P1 Must</option><option>P2 Should</option><option>P3 Nice</option></select></td>
+        <td><textarea></textarea></td>
+        <td><input type="text"/></td>
+      </tr>
+      <tr>
+        <td><input type="text" style="font-family:var(--mono);font-size:11px" placeholder="AI-001"/></td>
+        <td><select style="font-size:11px"><option>AI/Auto</option><option>Document</option><option>Invoicing</option><option>Brokering</option><option>Factoring</option><option>Reporting</option><option>Other</option></select></td>
+        <td><textarea></textarea></td>
+        <td><select style="font-size:11px"><option>P1 Must</option><option>P2 Should</option><option>P3 Nice</option></select></td>
+        <td><textarea></textarea></td>
+        <td><input type="text"/></td>
       </tr>
     </tbody>
   </table>
-  <button class="add-row-btn" onclick="addWishRow()">+ Add another wish</button>
+  <button class="add-row-btn" onclick="addReqRow()">+ Add requirement</button>
 </div>
 
 <!-- ══════════════ FORM H — SIGN-OFF ══════════════ -->
 <div class="form-section">
   <div class="form-section-header">
     <div class="fsn">H</div>
-    <h2>Almost Done — Just a Few Final Details</h2>
-    <span class="section-note">2 min</span>
+    <h2>Scope Agreement &amp; Sign-Off</h2>
+    <span class="section-note">Sign before implementation begins</span>
   </div>
 
-  <p style="font-size:13px;color:var(--ink2);margin-bottom:16px;">Once we review everything you've filled out, we'll come back with a proposal. Before we do that, help us understand the big picture on scope and timing.</p>
+  <p style="font-size:13px;color:var(--ink2);margin-bottom:16px;">The following summarizes the agreed scope, budget, and timeline before work begins. Both parties sign to confirm alignment.</p>
 
   <div class="field-row col2">
     <div class="field-group">
-      <label class="field-label">What's the #1 thing you want fixed first?</label>
-      <textarea placeholder="e.g. Getting invoices out faster so I get paid sooner"></textarea>
+      <label class="field-label">Agreed Phase 1 Scope (brief)</label>
+      <textarea placeholder="e.g. Document capture setup, invoice template, Drive folder structure"></textarea>
     </div>
     <div class="field-group">
-      <label class="field-label">What's your rough budget for monthly tools and support?</label>
-      <input type="text" placeholder="e.g. Under $200/month"/>
+      <label class="field-label">Agreed Monthly Tool Budget Cap</label>
+      <input type="text" placeholder="e.g. $150/month"/>
     </div>
   </div>
 
   <div class="field-row col2">
     <div class="field-group">
-      <label class="field-label">When would you like to have something up and running by?</label>
+      <label class="field-label">Phase 1 Target Completion Date</label>
       <input type="date"/>
     </div>
     <div class="field-group">
-      <label class="field-label">Best time for a 30-minute call to go over what we found?</label>
-      <input type="text" placeholder="e.g. Weekday mornings before 9, or Saturday"/>
+      <label class="field-label">Review / Check-in Date</label>
+      <input type="date"/>
     </div>
   </div>
 
   <div class="field-group">
-    <label class="field-label">Anything else you want us to know before we build your proposal?</label>
-    <textarea placeholder="Anything at all — the more context the better"></textarea>
+    <label class="field-label">Out of Scope (explicitly excluded from this engagement)</label>
+    <textarea placeholder="e.g. Accounting / tax advice, driver payroll, insurance, full TMS implementation"></textarea>
   </div>
 
   <div class="sig-block">
     <div>
-      <div class="sig-line"><label>Your Signature</label></div>
-      <div style="margin-top:8px"><input type="text" placeholder="Your name"/></div>
+      <div class="sig-line"><label>Client Signature</label></div>
+      <div style="margin-top:8px"><input type="text" placeholder="Printed name, title"/></div>
     </div>
     <div>
-      <div class="sig-line"><label>Date Completed</label></div>
+      <div class="sig-line"><label>Consultant / PM Signature</label></div>
+      <div style="margin-top:8px"><input type="text" placeholder="Printed name"/></div>
+    </div>
+    <div>
+      <div class="sig-line"><label>Date</label></div>
+      <div style="margin-top:8px"><input type="date"/></div>
+    </div>
+    <div>
+      <div class="sig-line"><label>Date</label></div>
       <div style="margin-top:8px"><input type="date"/></div>
     </div>
   </div>
 </div>
 
 <div class="doc-watermark">
-  STALLION TANK — Business Improvement Survey v1.0 — Fill out, save your progress, export PDF, and email it back when you're done.
+  BLANK INTAKE FORMS v1.1 — Trucking SMB Requirements Engineering — Companion to Completed Example Document
 </div>
 
 <script>
@@ -1185,12 +1194,17 @@ function addPainRow() {
   markDirty();
 }
 
-function addWishRow() {
-  const tbody = document.getElementById('wishRows');
+function addReqRow() {
+  const tbody = document.getElementById('reqRows');
+  const count = tbody.rows.length + 1;
   const tr = document.createElement('tr');
   tr.innerHTML = `
-    <td><textarea placeholder="I wish the system would..."></textarea></td>
-    <td><select><option></option><option>1 — Nice to have</option><option>2</option><option>3 — Important</option><option>4</option><option>5 — Can't live without it</option></select></td>`;
+    <td><input type="text" placeholder="REQ-00${count}" style="font-family:var(--mono);font-size:11px"/></td>
+    <td><select style="font-size:11px"><option>Document</option><option>Invoicing</option><option>Brokering</option><option>Factoring</option><option>AI/Auto</option><option>Reporting</option><option>Other</option></select></td>
+    <td><textarea></textarea></td>
+    <td><select style="font-size:11px"><option>P1 Must</option><option>P2 Should</option><option>P3 Nice</option></select></td>
+    <td><textarea></textarea></td>
+    <td><input type="text"/></td>`;
   tbody.appendChild(tr);
   attachDirtyListeners(tr);
   markDirty();
@@ -1242,7 +1256,7 @@ function collectFormData() {
 
   // Track how many extra rows exist in dynamic tables
   data.painExtraRows = document.getElementById('painRows').rows.length - 8; // 8 static rows
-  data.wishExtraRows = document.getElementById('wishRows').rows.length - 3; // 3 static rows
+  data.reqExtraRows  = document.getElementById('reqRows').rows.length  - 5; // 5 static rows
 
   data.savedAt = new Date().toLocaleString();
   return data;
@@ -1256,8 +1270,8 @@ function restoreFormData(data) {
   const painExtra = Math.max(0, data.painExtraRows || 0);
   for (let i = 0; i < painExtra; i++) addPainRow();
 
-  const wishExtra = Math.max(0, data.wishExtraRows || 0);
-  for (let i = 0; i < wishExtra; i++) addWishRow();
+  const reqExtra = Math.max(0, data.reqExtraRows || 0);
+  for (let i = 0; i < reqExtra; i++) addReqRow();
 
   // Now restore values — same order as collectFormData
   const allEls = document.querySelectorAll('input, select, textarea');
