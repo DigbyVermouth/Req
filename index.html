@@ -37,7 +37,7 @@
     line-height: 1.65;
     max-width: 860px;
     margin: 0 auto;
-    padding: 40px 32px;
+    padding: 80px 32px 40px;
   }
 
   /* ── COVER ── */
@@ -346,23 +346,27 @@
 
   /* ── STICKY TOOLBAR ── */
   .toolbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background: var(--accent);
-    margin: -40px -32px 40px;
-    padding: 10px 32px;
+    padding: 8px 12px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
   .toolbar-title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #fff;
     opacity: 0.85;
     flex: 1;
+    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -370,41 +374,51 @@
   .toolbar-btn {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 7px 16px;
+    justify-content: center;
+    gap: 5px;
+    padding: 6px 12px;
     border-radius: 6px;
     font-family: var(--font);
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
-    border: none;
-    transition: opacity .15s, transform .1s;
+    flex-shrink: 0;
+    width: auto;
     white-space: nowrap;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: opacity .15s, transform .1s;
+    line-height: 1;
   }
   .toolbar-btn:active { transform: scale(0.97); }
   .btn-save {
     background: rgba(255,255,255,0.15);
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.35);
   }
   .btn-save:hover { background: rgba(255,255,255,0.25); }
   .btn-clear {
     background: transparent;
-    color: rgba(255,255,255,0.6);
-    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.55);
+    border: 1px solid rgba(255,255,255,0.2);
     font-weight: 400;
   }
-  .btn-clear:hover { color: #fff; background: rgba(255,0,0,0.2); }
+  .btn-clear:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
   .btn-pdf {
     background: #fff;
     color: var(--accent);
+    border: 1px solid #fff;
   }
-  .btn-pdf:hover { opacity: 0.9; }
+  .btn-pdf:hover { opacity: 0.88; }
   .save-status {
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
     font-style: italic;
-    min-width: 140px;
+    flex-shrink: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: right;
   }
   .save-status.saved { color: #7ee8b8; }
