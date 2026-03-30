@@ -344,15 +344,205 @@
     letter-spacing: .04em;
   }
 
+  /* ── STICKY TOOLBAR ── */
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--accent);
+    margin: -40px -32px 40px;
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  .toolbar-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.85;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity .15s, transform .1s;
+    white-space: nowrap;
+  }
+  .toolbar-btn:active { transform: scale(0.97); }
+  .btn-save {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  .btn-save:hover { background: rgba(255,255,255,0.25); }
+  .btn-clear {
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.15);
+    font-weight: 400;
+  }
+  .btn-clear:hover { color: #fff; background: rgba(255,0,0,0.2); }
+  .btn-pdf {
+    background: #fff;
+    color: var(--accent);
+  }
+  .btn-pdf:hover { opacity: 0.9; }
+  .save-status {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+    min-width: 140px;
+    text-align: right;
+  }
+  .save-status.saved { color: #7ee8b8; }
+  .save-status.unsaved { color: #ffd77a; }
+
+  /* ── TOAST NOTIFICATION ── */
+  #toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .25s, transform .25s;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  #toast.show { opacity: 1; transform: translateY(0); }
+
+  /* ── PRINT / PDF STYLES ── */
   @media print {
-    body { max-width: 100%; padding: 20px; font-size: 12px; }
-    .cover { page-break-after: always; }
-    .form-section { page-break-inside: avoid; }
-    .add-row-btn { display: none; }
+    @page { margin: 18mm 16mm; size: A4 portrait; }
+
+    .toolbar { display: none !important; }
+    #toast { display: none !important; }
+    .add-row-btn { display: none !important; }
+    .doc-watermark { display: none !important; }
+
+    body {
+      max-width: 100%;
+      padding: 0;
+      font-size: 11px;
+      line-height: 1.5;
+      color: #000;
+      background: #fff;
+    }
+
+    .cover {
+      border: 1.5px solid #1d3a6e;
+      background: #f4f7fb !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      page-break-after: always;
+      padding: 24px 28px;
+      margin-bottom: 0;
+    }
+
+    .form-section { page-break-inside: avoid; margin-bottom: 28px; }
+    .form-section-header { page-break-after: avoid; }
+
+    /* Render inputs as readable text boxes */
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+      border: none !important;
+      border-bottom: 1px solid #aaa !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      padding: 2px 4px !important;
+      font-size: 11px !important;
+      resize: none !important;
+    }
+    textarea { min-height: 36px !important; }
+
+    select {
+      border: none !important;
+      border-bottom: 1px solid #aaa !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      font-size: 11px !important;
+      padding: 2px 4px !important;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    /* Checked pills show as bold text */
+    .option-pill {
+      border: 1px solid #ccc !important;
+      background: transparent !important;
+      padding: 3px 10px !important;
+      font-size: 10px !important;
+    }
+    .option-pill input[type="checkbox"]:checked + *,
+    .option-pill input[type="radio"]:checked + * { font-weight: 700; }
+
+    /* Keep colored table headers */
+    .pain-matrix thead tr,
+    .req-capture thead tr,
+    .score-matrix thead tr {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .callout {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    h1 { font-size: 18px !important; }
+    h2 { font-size: 13px !important; }
+    .cover h2 { font-size: 11px !important; }
+    .form-section-header h2 { font-size: 13px !important; }
+
+    .sig-block { page-break-inside: avoid; }
+
+    /* Two-column grid collapses gracefully */
+    .field-row.col2, .field-row.col3 {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
 </head>
 <body>
+
+<!-- ══ STICKY TOOLBAR ══ -->
+<div class="toolbar">
+  <span class="toolbar-title">Trucking SMB — Intake Forms</span>
+  <span class="save-status" id="saveStatus">No saved data</span>
+  <button class="toolbar-btn btn-clear" onclick="clearSave()">Clear saved data</button>
+  <button class="toolbar-btn btn-save" onclick="saveForm()">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5l-3-3z"/><polyline points="13 5 10 5 10 2"/><rect x="5" y="9" width="6" height="5"/></svg>
+    Save progress
+  </button>
+  <button class="toolbar-btn btn-pdf" onclick="exportPDF()">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6l-4-4z"/><polyline points="9 2 9 6 13 6"/><line x1="5" y1="10" x2="11" y2="10"/><line x1="5" y1="13" x2="8" y2="13"/></svg>
+    Export PDF
+  </button>
+</div>
+
+<!-- ══ TOAST ══ -->
+<div id="toast"></div>
 
 <!-- ══ COVER ══ -->
 <div class="cover">
@@ -968,10 +1158,15 @@
 </div>
 
 <div class="doc-watermark">
-  BLANK INTAKE FORMS v1.0 — Trucking SMB Requirements Engineering — Companion to Completed Example Document
+  BLANK INTAKE FORMS v1.1 — Trucking SMB Requirements Engineering — Companion to Completed Example Document
 </div>
 
 <script>
+const SAVE_KEY = 'truckingIntakeForms_v1';
+let autoSaveTimer = null;
+let isDirty = false;
+
+/* ── ROW BUILDERS ── */
 function addPainRow() {
   const tbody = document.getElementById('painRows');
   const tr = document.createElement('tr');
@@ -981,6 +1176,8 @@ function addPainRow() {
     <td><select><option></option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Rarely</option></select></td>
     <td><textarea></textarea></td>`;
   tbody.appendChild(tr);
+  attachDirtyListeners(tr);
+  markDirty();
 }
 
 function addReqRow() {
@@ -995,7 +1192,147 @@ function addReqRow() {
     <td><textarea></textarea></td>
     <td><input type="text"/></td>`;
   tbody.appendChild(tr);
+  attachDirtyListeners(tr);
+  markDirty();
 }
+
+/* ── DIRTY TRACKING ── */
+function markDirty() {
+  isDirty = true;
+  setStatus('Unsaved changes', 'unsaved');
+  clearTimeout(autoSaveTimer);
+  autoSaveTimer = setTimeout(() => { saveForm(true); }, 8000);
+}
+
+function attachDirtyListeners(root) {
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', markDirty);
+    el.addEventListener('change', markDirty);
+  });
+}
+
+/* ── STATUS DISPLAY ── */
+function setStatus(msg, cls) {
+  const el = document.getElementById('saveStatus');
+  el.textContent = msg;
+  el.className = 'save-status ' + (cls || '');
+}
+
+/* ── TOAST ── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+/* ── SERIALIZE ALL FORM DATA ── */
+function collectFormData() {
+  const data = { fields: {}, painExtraRows: 0, reqExtraRows: 0 };
+
+  // All static inputs/selects/textareas — assign an index-based key
+  const allEls = document.querySelectorAll('input, select, textarea');
+  allEls.forEach((el, i) => {
+    if (el.type === 'checkbox' || el.type === 'radio') {
+      data.fields['el_' + i] = el.checked;
+    } else {
+      data.fields['el_' + i] = el.value;
+    }
+  });
+
+  // Track how many extra rows exist in dynamic tables
+  data.painExtraRows = document.getElementById('painRows').rows.length - 8; // 8 static rows
+  data.reqExtraRows  = document.getElementById('reqRows').rows.length  - 5; // 5 static rows
+
+  data.savedAt = new Date().toLocaleString();
+  return data;
+}
+
+/* ── RESTORE FORM DATA ── */
+function restoreFormData(data) {
+  if (!data || !data.fields) return;
+
+  // Re-create extra pain rows first
+  const painExtra = Math.max(0, data.painExtraRows || 0);
+  for (let i = 0; i < painExtra; i++) addPainRow();
+
+  const reqExtra = Math.max(0, data.reqExtraRows || 0);
+  for (let i = 0; i < reqExtra; i++) addReqRow();
+
+  // Now restore values — same order as collectFormData
+  const allEls = document.querySelectorAll('input, select, textarea');
+  allEls.forEach((el, i) => {
+    const val = data.fields['el_' + i];
+    if (val === undefined) return;
+    if (el.type === 'checkbox' || el.type === 'radio') {
+      el.checked = !!val;
+    } else {
+      el.value = val;
+    }
+  });
+}
+
+/* ── SAVE ── */
+function saveForm(silent) {
+  try {
+    const data = collectFormData();
+    localStorage.setItem(SAVE_KEY, JSON.stringify(data));
+    isDirty = false;
+    setStatus('Saved ' + data.savedAt, 'saved');
+    if (!silent) showToast('Progress saved to this browser ✓');
+  } catch(e) {
+    showToast('Save failed — storage may be full or unavailable.');
+  }
+}
+
+/* ── CLEAR SAVED DATA ── */
+function clearSave() {
+  if (!confirm('Clear all saved data and reset the form? This cannot be undone.')) return;
+  try {
+    localStorage.removeItem(SAVE_KEY);
+    showToast('Saved data cleared. Reloading...');
+    setTimeout(() => location.reload(), 1200);
+  } catch(e) {
+    showToast('Could not clear — try reloading manually.');
+  }
+}
+
+/* ── EXPORT PDF ── */
+function exportPDF() {
+  // Auto-save first so nothing is lost
+  saveForm(true);
+  showToast('Opening print dialog — choose "Save as PDF" as the destination.');
+  setTimeout(() => window.print(), 600);
+}
+
+/* ── INIT ── */
+document.addEventListener('DOMContentLoaded', () => {
+  // Attach dirty listeners to all static elements
+  attachDirtyListeners(document.body);
+
+  // Try to restore saved data
+  try {
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (raw) {
+      const data = JSON.parse(raw);
+      restoreFormData(data);
+      setStatus('Restored from ' + data.savedAt, 'saved');
+      showToast('Your saved progress has been restored.');
+    } else {
+      setStatus('No saved data', '');
+    }
+  } catch(e) {
+    setStatus('Could not restore save', '');
+  }
+});
+
+// Warn before leaving with unsaved changes
+window.addEventListener('beforeunload', e => {
+  if (isDirty) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
 </script>
 </body>
 </html>
